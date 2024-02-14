@@ -17,6 +17,16 @@ namespace InterfaceDemo
             runners.Add(person);
             runners.Add(animal);
 
+            foreach (IRun runner in runners)
+            {
+                if (runner is IRun run)
+                {
+                    Console.WriteLine(runner);
+                }
+            }
+
+            Console.WriteLine(runners.Count);
+
             Console.ReadLine();
         }
 
